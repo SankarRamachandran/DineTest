@@ -1,0 +1,13 @@
+id:
+  providerName: admin
+  apiName: "SampleAPI"
+  version: 1.0.0
+type: HTTP
+context: "/sample"
+availableTiers:
+- name: Unlimited
+status: PUBLISHED
+visibility: public
+transports: http,https
+productionUrl: http://172.16.177.155:8280
+sandboxUrl: http://172.16.177.155:8280
