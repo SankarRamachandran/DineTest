@@ -4,8 +4,8 @@ id:
   version: "1.0"
 uuid: 9b879657-3e95-4bf1-b31b-0a124b22097a
 type: HTTP
-context: /api/paycenterrtp/send/1.0
-contextTemplate: /api/paycenterrtp/send/{version}
+context: /api/paycenterrtp/1.0
+contextTemplate: /api/paycenterrtp/{version}
 tags: []
 documents: []
 lastUpdated: Oct 1, 2020 11:05:38 AM

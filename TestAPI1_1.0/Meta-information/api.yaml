@@ -4,8 +4,8 @@ id:
   version: "1.0"
 uuid: f2e2df35-82e3-4a25-86b1-f6ad46614f21
 type: HTTP
-context: /test1/1.0
-contextTemplate: /test1/{version}
+context: /test1/sample/1.0
+contextTemplate: /test1/sample/{version}
 tags: []
 documents: []
 lastUpdated: Sep 30, 2020 3:41:06 PM

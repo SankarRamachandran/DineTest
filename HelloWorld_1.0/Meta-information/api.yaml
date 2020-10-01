@@ -4,8 +4,8 @@ id:
   version: "1.0"
 uuid: 89fed4c7-c462-4952-a368-2ca9aac5950d
 type: HTTP
-context: /hello/1.0
-contextTemplate: /hello/{version}
+context: /hello/world/1.0
+contextTemplate: /hello/world/{version}
 tags: []
 documents: []
 lastUpdated: Sep 30, 2020 3:15:40 PM
