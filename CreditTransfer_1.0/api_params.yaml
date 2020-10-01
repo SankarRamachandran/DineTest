@@ -1,0 +1,13 @@
+environments: 
+  - name: dev 
+    endpoints: 
+      production: 
+        url: 'http://10.201.166.39:8280' 
+      sandbox:
+        url: 'http://10.201.166.39:8280' 
+  - name: stage
+    endpoints:
+      production:
+        url: 'http://172.24.114.67:8280'
+      sandbox:
+        url: 'http://172.24.114.67:8280'
