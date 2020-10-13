@@ -1,7 +1,7 @@
 id:
   providerName: admin
   apiName: CreditTransfer
-  version: "1.0"
+  version: v1
 uuid: 9b879657-3e95-4bf1-b31b-0a124b22097a
 type: HTTP
 context: /api/paycenterrtp/1.0
