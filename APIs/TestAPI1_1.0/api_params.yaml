@@ -2,12 +2,12 @@ environments:
   - name: dev 
     endpoints: 
       production: 
-        url: 'https://pceddewei01.fpdev.local/wso2api/' 
+        url: 'https://pceddewei01.fpdev.local/wso2api/credittransfer' 
       sandbox:
-        url: 'https://pceddewei01.fpdev.local/wso2api/' 
+        url: 'https://pceddewei01.fpdev.local/wso2api/credittransfer' 
   - name: stage
     endpoints:
       production:
-        url: 'https://pceddewei01.fpdev.local/wso2api/'
+        url: 'https://pceddewei01.fpdev.local/wso2api/credittransfer'
       sandbox:
-        url: 'https://pceddewei01.fpdev.local/wso2api/'
+        url: 'https://pceddewei01.fpdev.local/wso2api/credittransfer'
