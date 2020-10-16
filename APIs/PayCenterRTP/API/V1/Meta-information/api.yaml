@@ -1,6 +1,6 @@
 id:
   providerName: admin
-  apiName: CreditTransfer
+  apiName: CreditTransfers
   version: "1.0"
 uuid: 9639db99-a406-4d5e-aee3-40358322a8f6
 type: HTTP
@@ -47,7 +47,7 @@ implementation: ENDPOINT
 authorizationHeader: Authorization
 scopes: []
 isDefaultVersion: true
-isPublishedDefaultVersion: false
+isPublishedDefaultVersion: true
 environments:
  - Production and Sandbox
 createdTime: "1602828651683"
