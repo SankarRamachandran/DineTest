@@ -1,14 +1,14 @@
 id:
-  providerName: apicreator
+  providerName: admin
   apiName: CreditTransfer
-  version: v1
-uuid: 9b879657-3e95-4bf1-b31b-0a124b22097a
+  version: "1.0"
+uuid: 9639db99-a406-4d5e-aee3-40358322a8f6
 type: HTTP
 context: /api/paycenterrtp/1.0
 contextTemplate: /api/paycenterrtp/{version}
 tags: []
 documents: []
-lastUpdated: Oct 1, 2020 11:05:38 AM
+lastUpdated: Oct 16, 2020 11:41:44 AM
 availableTiers:
  -
   name: Unlimited
@@ -27,40 +27,30 @@ apiResourcePatternsChanged: false
 status: PUBLISHED
 visibility: public
 gatewayLabels: []
-endpointSecured: false
+endpointSecured: true
 endpointAuthDigest: false
+endpointUTUsername: admin
+endpointUTPassword: admin
 transports: http,https
 advertiseOnly: false
 subscriptionAvailability: all_tenants
 corsConfiguration:
-  corsConfigurationEnabled: false
-  accessControlAllowOrigins:
-   - '*'
-  accessControlAllowCredentials: false
-  accessControlAllowHeaders:
-   - authorization
-   - Access-Control-Allow-Origin
-   - Content-Type
-   - SOAPAction
-   - apikey
-  accessControlAllowMethods:
-   - GET
-   - PUT
-   - POST
-   - DELETE
-   - PATCH
-   - OPTIONS
-endpointConfig: '{"endpoint_type":"http","sandbox_endpoints":{"url":"http:\/\/10.201.166.39:8280"},"production_endpoints":{"url":"http:\/\/10.201.166.39:8280"}}'
+  corsConfigurationEnabled: true
+  accessControlAllowOrigins: []
+  accessControlAllowCredentials: true
+  accessControlAllowHeaders: []
+  accessControlAllowMethods: []
+endpointConfig: '{"endpoint_type":"http","sandbox_endpoints":{"url":"http://172.16.177.155:8280/credittransfer"},"production_endpoints":{"url":"http://172.16.177.155:8280/credittransfer"}}'
 responseCache: Disabled
 cacheTimeout: 300
 implementation: ENDPOINT
 authorizationHeader: Authorization
 scopes: []
-isDefaultVersion: false
-isPublishedDefaultVersion: false
+isDefaultVersion: true
+isPublishedDefaultVersion: true
 environments:
  - Production and Sandbox
-createdTime: "1601530378287"
+createdTime: "1602828651683"
 additionalProperties: {}
 monetizationProperties: {}
 isMonetizationEnabled: false
