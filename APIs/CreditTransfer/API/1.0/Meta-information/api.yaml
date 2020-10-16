@@ -47,7 +47,7 @@ implementation: ENDPOINT
 authorizationHeader: Authorization
 scopes: []
 isDefaultVersion: true
-isPublishedDefaultVersion: false
+isPublishedDefaultVersion: true
 environments:
  - Production and Sandbox
 createdTime: "1602830063873"
