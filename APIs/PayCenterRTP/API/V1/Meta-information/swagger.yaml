@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
-  title: PayCenterRTPAPI
-  version: v1
+  title: CreditTransfer
+  version: "1.0"
 servers:
  -
   url: /
@@ -9,88 +9,47 @@ security:
  -
   default: []
 paths:
-  /{rtnnumber}/environments/{envname}/products/paycenter/networks/rtp/refund-requests:
-    post:
-      parameters:
-       -
-        name: rtnnumber
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-          format: string
-       -
-        name: envname
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-          format: string
+  /*:
+    get:
       responses:
         200:
-          description: ok
+          description: OK
       security:
        -
         default: []
       x-auth-type: Application & Application User
       x-throttling-tier: Unlimited
-  /{rtnnumber}/environments/{envname}/products/paycenter/networks/rtp/credit-transfers:
-    post:
-      parameters:
-       -
-        name: rtnnumber
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-          format: string
-       -
-        name: envname
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-          format: string
+    put:
       responses:
         200:
-          description: ok
+          description: OK
       security:
        -
         default: []
       x-auth-type: Application & Application User
       x-throttling-tier: Unlimited
-  /{rtnnumber}/environments/{envname}/products/paycenter/networks/rtp/payment-requests:
     post:
-      parameters:
-       -
-        name: rtnnumber
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-          format: string
-       -
-        name: envname
-        in: path
-        required: true
-        style: simple
-        explode: false
-        schema:
-          type: string
-          format: string
       responses:
         200:
-          description: ok
+          description: OK
+      security:
+       -
+        default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+    delete:
+      responses:
+        200:
+          description: OK
+      security:
+       -
+        default: []
+      x-auth-type: Application & Application User
+      x-throttling-tier: Unlimited
+    patch:
+      responses:
+        200:
+          description: OK
       security:
        -
         default: []
