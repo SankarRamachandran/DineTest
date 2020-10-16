@@ -1,0 +1,21 @@
+---
+- hosts: localhost
+  connection: local
+  become_method: sudo
+  tasks:
+   - name: checking Maven
+     command: mvn -version
+   - name: maven clean install
+     command: mvn -f /data/AURAS/GIT/src/AURAS/AURAS/OCIS/CodeBase/OmniChannelIntegrationServices/pom.xml clean install
+   - name: maven clean install	
+     command: mvn -f /data/AURAS/GIT/src/AURAS/AURAS/OCIS/CodeBase/AURAS_CAR_OmniChannelIntegrationServices/pom.xml clean install
+   - name: Delete CAR File from Dev Active directory
+     file: path=/data/AURAS/Deployment/AURAS/AURAS_CAR_OmniChannelIntegrationServices/Active/AURAS_OCIS_1.0.0.car state=absent
+   - name: Move CAR File from Target to Dev Active Directory
+     command: mv /data/AURAS/GIT/src/AURAS/AURAS/OCIS/CodeBase/AURAS_CAR_OmniChannelIntegrationServices/target/AURAS_OCIS_1.0.0.car /data/AURAS/Deployment/AURAS/AURAS_CAR_OmniChannelIntegrationServices/Active/AURAS_OCIS_1.0.0.car
+   - name: Delete CAR File from Wso2 Carbon Apps directory
+     file: path=/data/AURAS/WSO2ESB/wso2ei-6.1.1/wso2ei-6.1.1/repository/deployment/server/carbonapps/AURAS_OCIS_1.0.0.car state=absent	 
+   - name: Copy CAR File From Active Directory to WSO2 Carbon Apps Directory
+     command: cp /data/AURAS/Deployment/AURAS/AURAS_CAR_OmniChannelIntegrationServices/Active/AURAS_OCIS_1.0.0.car /data/AURAS/WSO2ESB/wso2ei-6.1.1/wso2ei-6.1.1/repository/deployment/server/carbonapps/AURAS_OCIS_1.0.0.car
+   - name: Copy CAR File From Active Directory to Archive Directory with Following Naming Convention - Carfilename_{dattimestamp}.car
+     command: cp /data/AURAS/Deployment/AURAS/AURAS_CAR_OmniChannelIntegrationServices/Active/AURAS_OCIS_1.0.0.car /data/AURAS/Deployment/AURAS/AURAS_CAR_OmniChannelIntegrationServices/Archive/AURAS_OCIS_1.0.0_{{ lookup('pipe', 'date +%Y%m%d-%H%M%S') }}.car
