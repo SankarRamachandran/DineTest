@@ -8,6 +8,6 @@ environments:
   - name: stage
     endpoints:
       production:
-        url: 'http://172.16.177.155:8280/credittransfers'
+        url: 'http://172.16.177.155:8280/credittransfer'
       sandbox:
-        url: 'http://172.16.177.155:8280/credittransfers'
+        url: 'http://172.16.177.155:8280/credittransfer'
