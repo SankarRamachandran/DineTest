@@ -57,8 +57,8 @@ cacheTimeout: 300
 implementation: ENDPOINT
 authorizationHeader: Authorization
 scopes: []
-isDefaultVersion: false
-isPublishedDefaultVersion: false
+isDefaultVersion: true
+isPublishedDefaultVersion: true
 environments:
  - Production and Sandbox
 createdTime: "1601460617117"
