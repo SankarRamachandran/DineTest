@@ -40,7 +40,7 @@ corsConfiguration:
   accessControlAllowCredentials: false
   accessControlAllowHeaders: []
   accessControlAllowMethods: []
-endpointConfig: '{"endpoint_type":"http","sandbox_endpoints":{"url":"http:\/\/172.16.177.155:8280\/credittransfer"},"production_endpoints":{"url":"http:\/\/172.16.177.155:8280\/credittransfer"}}'
+endpointConfig: '{"endpoint_type":"http","sandbox_endpoints":{"url":"http:\/\/172.16.177.155:8280\/credittransfers"},"production_endpoints":{"url":"http:\/\/172.16.177.155:8280\/credittransfers"}}'
 responseCache: Disabled
 cacheTimeout: 300
 implementation: ENDPOINT
