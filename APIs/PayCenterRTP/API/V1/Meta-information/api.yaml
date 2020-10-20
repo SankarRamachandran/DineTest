@@ -24,7 +24,7 @@ availableSubscriptionLevelPolicies: []
 uriTemplates: []
 apiHeaderChanged: false
 apiResourcePatternsChanged: false
-status: PUBLISHED
+status: ${ConsolePassword}
 visibility: public
 gatewayLabels: []
 endpointSecured: true
