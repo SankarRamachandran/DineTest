@@ -30,7 +30,7 @@ gatewayLabels: []
 endpointSecured: true
 endpointAuthDigest: false
 endpointUTUsername: admin
-endpointUTPassword: ""
+endpointUTPassword: ${ConsolePassword}
 transports: http,https
 advertiseOnly: false
 subscriptionAvailability: all_tenants
