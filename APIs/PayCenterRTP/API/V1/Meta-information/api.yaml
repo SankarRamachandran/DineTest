@@ -40,7 +40,7 @@ corsConfiguration:
   accessControlAllowCredentials: false
   accessControlAllowHeaders: []
   accessControlAllowMethods: []
-endpointConfig: '{"endpoint_type":"http","sandbox_endpoints":{"url":"https://pceddewei01.fpdev.local/wso2api/v1/institutions"},"production_endpoints":{"url":"https://pceddewei01.fpdev.local/wso2api/v1/institutions"}}'
+endpointConfig: '{"endpoint_type":"load_balance","algoCombo":"org.apache.synapse.endpoints.algorithms.RoundRobin","sessionManagement":"","sandbox_endpoints":[{"template_not_supported":false,"url":"http://10.226.168.203:8280/v1/institutions"},{"endpoint_type":"http","template_not_supported":false,"url":"http://10.226.168.203:8280/v1/institutions"},{"endpoint_type":"http","template_not_supported":false,"url":"http://10.226.168.202:8280/v1/institutions"}],"failOver":"False","sessionTimeOut":"","production_endpoints":[{"template_not_supported":false,"url":"http://10.226.168.203:8280/v1/institutions"},{"endpoint_type":"http","template_not_supported":false,"url":"http://10.226.168.203:8280/v1/institutions"},{"endpoint_type":"http","template_not_supported":false,"url":"http://10.226.168.202:8280/v1/institutions"}],"algoClassName":"org.apache.synapse.endpoints.algorithms.RoundRobin"}'
 responseCache: Disabled
 cacheTimeout: 300
 implementation: ENDPOINT
