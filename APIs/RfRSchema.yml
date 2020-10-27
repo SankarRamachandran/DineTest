@@ -1,0 +1,12 @@
+
+      RequestForRefund: 
+        properties: 
+          ReasonCode: 
+            type: "string"
+            example: "FRAD"
+          Id: 
+            type: "string"
+            example: "152bf5b2-d081-4228-81f2-b3a485ae9703"
+          Notes: 
+            type: "string"
+            example: "There was a fraudulent notice that was circulated and hence I decided to request for a refund of my money."
