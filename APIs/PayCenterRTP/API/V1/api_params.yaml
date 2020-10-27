@@ -8,6 +8,6 @@ environments:
   - name: stage
     endpoints:
       production:
-        url: 'https://pceddewei01.fpdev.local/wso2api/v1/institutions'
+        url: 'http://172.16.176.155:8280/v1/institutions'
       sandbox:
-        url: 'https://pceddewei01.fpdev.local/wso2api/v1/institutions'
+        url: 'http://172.16.176.155:8280/v1/institutions'
