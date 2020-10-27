@@ -1,17 +1,177 @@
 {
-  "RequestForRefund": {
-    "properties": {
-      "ReasonCode": {
-        "type": "string",
-        "example": "FRAD"
+  "components": {
+    "schemas": {
+      "CTRequest": {
+        "$ref": "#/components/schemas/CreditTransfer"
       },
-      "Id": {
-        "type": "string",
-        "example": "152bf5b2-d081-4228-81f2-b3a485ae9703"
+      "CreditTransfer": {
+        "type": "object",
+        "properties": {
+          "Debtor": {
+            "$ref": "#/components/schemas/CTDbtr"
+          },
+          "Creditor": {
+            "$ref": "#/components/schemas/CTCrdr"
+          },
+          "CreditTransferDescription": {
+            "$ref": "#/components/schemas/CTDesc"
+          }
+        }
       },
-      "Notes": {
-        "type": "string",
-        "example": "There was a fraudulent notice that was circulated and hence I decided to request for a refund of my money."
+      "CTDbtr": {
+        "type": "object",
+        "properties": {
+          "AccountNumber": {
+            "type": "string",
+            "example": "201990001"
+          }
+        }
+      },
+      "CTCrdr": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "example": "Jamie Brendon"
+          },
+          "RoutingNumber": {
+            "type": "string",
+            "example": "234567891"
+          },
+          "AccountNumber": {
+            "type": "string",
+            "example": "US88664715164441"
+          }
+        }
+      },
+      "CTDesc": {
+        "type": "object",
+        "properties": {
+          "Amount": {
+            "type": "string",
+            "example": "90.01"
+          },
+          "OriginatorType": {
+            "type": "string",
+            "example": "CONSUMER"
+          },
+          "Notes": {
+            "type": "string",
+            "example": "Test Transaction"
+          },
+          "IsReturnOfFunds": {
+            "type": "string",
+            "example": "false"
+          },
+          "OriginalCreditTransferId": {
+            "type": "string",
+            "example": "123456"
+          }
+        }
+      },
+      "RfRRequest": {
+        "$ref": "#/components/schemas/RequestForRefund"
+      },
+      "RequestForRefund": {
+        "properties": {
+          "ReasonCode": {
+            "type": "string",
+            "example": "FRAD"
+          },
+          "Id": {
+            "type": "string",
+            "example": "152bf5b2-d081-4228-81f2-b3a485ae9703"
+          },
+          "Notes": {
+            "type": "string",
+            "example": "There was a fraudulent notice that was circulated and hence I decided to request for a refund of my money."
+          }
+        }
+      },
+      "RfPRequest": {
+        "type": "object",
+        "properties": {
+          "RequestForPayment": {
+            "$ref": "#/components/schemas/RequestForPayment"
+          }
+        }
+      },
+      "RequestForPayment": {
+        "type": "object",
+        "properties": {
+          "Creditor": {
+            "$ref": "#/components/schemas/RfPCrdr"
+          },
+          "Debitor": {
+            "$ref": "#/components/schemas/RfPDbtr"
+          },
+          "PaymentDescription": {
+            "$ref": "#/components/schemas/PaymentDesc"
+          }
+        }
+      },
+      "RfPCrdr": {
+        "type": "object",
+        "properties": {
+          "AccountNumber": {
+            "type": "string",
+            "example": "201990001"
+          },
+          "UltimateCreditor": {
+            "$ref": "#/components/schemas/UltCrdr"
+          }
+        }
+      },
+      "UltCrdr": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "example": "Martin Hess"
+          }
+        }
+      },
+      "RfPDbtr": {
+        "type": "object",
+        "properties": {
+          "Name": {
+            "type": "string",
+            "example": "Nimmy Ferrera"
+          },
+          "RoutingNumber": {
+            "type": "string",
+            "example": "234567891"
+          },
+          "AccountNumber": {
+            "type": "string",
+            "example": "US88664715164441"
+          }
+        }
+      },
+      "PaymentDesc": {
+        "type": "object",
+        "properties": {
+          "Amount": {
+            "type": "string",
+            "example": "90.01"
+          },
+          "OriginatorType": {
+            "type": "string",
+            "example": "CONSUMER"
+          },
+          "IsAmountModifyAllowed": {
+            "type": "boolean",
+            "example": false
+          },
+          "PaymentDueDate": {
+            "type": "string",
+            "example": "2020-09-22"
+          },
+          "Notes": {
+            "type": "string",
+            "example": "Transaction notes comes here."
+          }
+        }
       }
     }
   }
