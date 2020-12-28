@@ -24,13 +24,13 @@ availableSubscriptionLevelPolicies: []
 uriTemplates: []
 apiHeaderChanged: false
 apiResourcePatternsChanged: false
-status: ${API_STATUS}
+status: PUBLISHED
 visibility: public
 gatewayLabels: []
 endpointSecured: true
 endpointAuthDigest: false
-endpointUTUsername: admin
-endpointUTPassword: ${ConsolePassword}
+endpointUTUsername: ${WSO2ConsolePassword}
+endpointUTPassword: ${WSO2ConsolePassword}
 transports: http,https
 advertiseOnly: false
 subscriptionAvailability: all_tenants
